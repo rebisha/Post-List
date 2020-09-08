@@ -5,7 +5,7 @@ import { Container, ListGroup } from "react-bootstrap";
 import PostPage from "./Pages/PostPage/PostPage";
 
 const App = () => {
-  const [post, setPost] = useState();
+  const [post, setPost] = useState([]);
 
   useEffect(() => {
     const fetchPost = async () => {
@@ -26,7 +26,9 @@ const App = () => {
     <Container className="py-5">
       <h1>Posts</h1>
       <ListGroup>
-        {post && post.map(item => <PostPage key={item.id} item={item} />)}
+        {post.map(item => (
+          <PostPage key={item.id} item={item} />
+        ))}
       </ListGroup>
     </Container>
   );
