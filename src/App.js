@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Container from "react-bootstrap/Container";
+import { Container, ListGroup } from "react-bootstrap";
 // components
-import ListItem from "./Component/ListItem/ListItem";
+import PostPage from "./Pages/PostPage/PostPage";
 
 const App = () => {
   const [post, setPost] = useState();
@@ -25,7 +25,9 @@ const App = () => {
   return (
     <Container className="py-5">
       <h1>Posts</h1>
-      {post && post.map(item => <ListItem key={item.id} item={item} />)}
+      <ListGroup>
+        {post && post.map(item => <PostPage key={item.id} item={item} />)}
+      </ListGroup>
     </Container>
   );
 };

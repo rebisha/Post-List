@@ -1,0 +1,17 @@
+.modalDialog {
+  margin: 0 auto !important;
+  text-transform: capitalize;
+
+  &-title {
+    font-weight: bold !important;
+  }
+
+  &-text {
+    margin-bottom: 0;
+    font-size: 18px;
+  }
+}
+
+.modal-content {
+  border: none !important;
+}

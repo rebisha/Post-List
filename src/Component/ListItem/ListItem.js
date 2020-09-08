@@ -1,13 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { ListGroup } from "react-bootstrap";
 
 import "./listItem.scss";
 
-const ListItem = ({ item }) => {
+const ListItem = ({ handleShow, title }) => {
   return (
-    <ListGroup className="listItem">
-      <ListGroup.Item className="listItem-item">{item.title}</ListGroup.Item>
-    </ListGroup>
+    <ListGroup.Item className="listItem-item" onClick={handleShow}>
+      {title}
+    </ListGroup.Item>
   );
 };
 
